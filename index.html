@@ -1,0 +1,139 @@
+<title>amecy: pinochle odds</title>
+
+<h3>Odds of being dealt particular melds in pinochle</h3>
+
+<P>
+The odds of receiving particular hands in poker are well known;
+a quick search reveals many pages explaining them
+(such as <a href="http://en.wikipedia.org/wiki/Poker_probability">Wikipedia's page</a>
+on the topic).  For Pinochle, I was never able to find a similar listing of probabilities
+for the various melds.  There are, of course, incredibly many questions we might be interested in,
+and we probably can't answer them all.
+Some of them, though, are natural and obvious to ask.
+What are the odds that I will be dealt a straight on this hand?
+What are my odds of being dealt four aces?
+What are my odds of having no meld at all?
+The purpose of this page is to answer a few questions like this.
+
+<P>
+The following probabilities were obtained using a program I wrote.  The code
+and instructions for using it are given at the bottom of this page.
+A lot of the numbers can be justified with brief math as well;
+if there is any interest, I will add the explanations when I get the time.
+
+<P>
+This chart assumes the standard 48-card deck and 3 or 4 players,
+with all the cards being dealt at the beginning of the hand.
+<!-- Blank spaces are just the ones I haven't gotten to yet. -->
+
+<style>
+<!--
+td {
+    text-align: center;
+}
+-->
+</style>
+
+<P>
+<table align=center border=1>
+<tr>
+<th>meld</th>
+<th>odds with 16 cards<br>(3 players)</th>
+<th>odds with 12 cards<br>(4 players)</th>
+</tr>
+<tr>
+<td>straight (A-10-K-Q-J in a suit)</td>
+<td>15.91%</td>
+<td>3.83%</td>
+</tr>
+<tr>
+<td>two straights in same suit</td>
+<td>0.00049%</td>
+<td>0.0000040%</td>
+</tr>
+<tr>
+<td>marriage (K-Q in a suit)</td>
+<td>79.94%</td>
+<td>58.91%</td>
+</tr>
+<tr>
+<td>pinochle (<font color=red>&diams;</font>J-&spades;Q)</td>
+<td>30.54%</td>
+<td>18.57%</td>
+</tr>
+<tr>
+<td>double pinochle</td>
+<td>0.94%</td>
+<td>0.25%</td>
+</tr>
+<tr>
+<td>4 aces (of different suits)</td>
+<td>8.25%</td>
+<td>2.76%</td>
+</tr>
+<tr>
+<td>all 8 aces</td>
+<td>0.0034%</td>
+<td>0.00013%</td>
+</tr>
+<tr>
+<td>exactly 7 aces</td>
+<td>0.097%</td>
+<td>0.0076%</td>
+</tr>
+<tr>
+<td>no aces</td>
+<td>2.79%</td>
+<td>8.02%</td>
+</tr>
+<tr>
+<td>roundhouse (marriage in each suit)</td>
+<td>0.36%</td>
+<td>0.022%</td>
+</tr>
+<tr>
+<td>no meld (except possibly 9's)</td>
+<td>11.19%</td>
+<td>31.34%</td>
+</tr>
+</table>
+
+<P>WARNING: Don't try to combine rows of this chart for combined melds (like having 4 aces and a straight),
+because the probabilities here are not enough information to find the answers.  If you are fearless,
+you can try to edit my program to give you the answer.  Or, you can just ask me; I'll try my best.
+It can't handle questions about more than one hand, such as the probability of two people getting a straight
+in the same round.  The only questions it can answer are questions of the form
+"What are the odds that a randomly dealt hand of X cards will contain a meld of type Y?"
+<!-- You can, however, say things about the average numbers of these occurrences per hand.
+For instance, since the odds that you will be dealt a straight in a 3-player game are around 16%, the average
+number of players per hand that will have a straight is 16% x 3 = 48%, almost 50%.  If you play two hands,
+on average, approximately one of the six hands dealt will contain a straight. -->
+
+<P>
+Note that the odds for aces also apply to kings/queens/jacks &mdash; for example, the odds of being dealt
+4 kings in a 16-card hand are 8.25%.
+
+<P>
+A <i>roundhouse</i> is a holding of a marriage in each suit.  It scores meld for 4 kings, 4 queens,
+1 trump marriage and 3 non-trump marriages.
+
+<P>The last line of the chart excludes nines from consideration because the value of a nine
+depends on the trump suit.
+
+<hr>
+<P>
+<a href="pin.c">This C program</a> was used to generate the above numbers.
+Compile it (under Unix, you can do <b>gcc -O3 pin.c -o pin</b>) and then run it
+with the commands <b>./pin 16</b> or <b>./pin 12</b> (the parameter is the hand size).
+It uses some interesting techniques, but for now this brief blurb will have to suffice.
+On my three-year-old machine, <b>./pin 16</b> runs in about 12 minutes; <b>./pin 12</b> finishes in
+a minute.  It should work for any hand size from 0 to 48, but the running time may be too long
+for your patience.  If you don't feel like running the program yourself, you can view
+the results for 16 cards and 12 cards <a href="pinochle2011.txt">here</a>.
+
+<P>I release the program under the terms of the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GNU
+General Public License version 3</a>.
+I welcome comments, questions, or corrections: you can find my email address <a href="http://www.amecy.com/email.cgi">here</a>.
+
+<P align=center>Copyright Tom Plick 2011
+
