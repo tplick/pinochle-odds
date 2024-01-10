@@ -182,7 +182,7 @@ struct Test TESTS[] = {
 };
 
 
-int main(char argc, char *argv[]){
+int main(int argc, char *argv[]){
     if (argc < 2){
         printf("Must supply size of hand.\n");
         exit(1);
