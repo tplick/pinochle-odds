@@ -1,0 +1,86 @@
+Dealing 12 cards.
+
+Unique hands: 287134346 out of 69668534468 (0.4121435%)
+
+Test: count hands
+Probability: 100.0000000% (69668534468 out of 69668534468)
+
+Test: marriage?
+Probability: 58.9058727% (41038858204 out of 69668534468)
+
+Test: straight?
+Probability: 3.8300376% (2668331068 out of 69668534468)
+
+Test: double straight?
+Probability: 0.0000040% (2812 out of 69668534468)
+
+Test: has two straights in different suits?
+Probability: 0.0046674% (3251712 out of 69668534468)
+
+Test: 4 aces
+Probability: 2.7624314% (1924545454 out of 69668534468)
+
+Test: 7 aces
+Probability: 0.0075559% (5264064 out of 69668534468)
+
+Test: 8 aces
+Probability: 0.0001312% (91390 out of 69668534468)
+
+Test: no aces
+Probability: 8.0191919% (5586853480 out of 69668534468)
+
+Test: pinochle?
+Probability: 18.5707678% (12937981771 out of 69668534468)
+
+Test: double pinochle?
+Probability: 0.2543941% (177232627 out of 69668534468)
+
+Test: roundhouse?
+Probability: 0.0218637% (15232096 out of 69668534468)
+
+Test: has no meld?
+Probability: 31.3431328% (21836301279 out of 69668534468)
+
+Dealing 16 cards.
+
+Unique hands: 3864164634 out of 2254848913647 (0.1713713%)
+
+Test: count hands
+Probability: 100.0000000% (2254848913647 out of 2254848913647)
+
+Test: marriage?
+Probability: 79.9404403% (1802536149417 out of 2254848913647)
+
+Test: straight?
+Probability: 15.9090338% (358724676452 out of 2254848913647)
+
+Test: double straight?
+Probability: 0.0004897% (11042724 out of 2254848913647)
+
+Test: has two straights in different suits?
+Probability: 0.3138202% (7076172480 out of 2254848913647)
+
+Test: 4 aces
+Probability: 8.2478063% (185975570157 out of 2254848913647)
+
+Test: 7 aces
+Probability: 0.0970136% (2187511040 out of 2254848913647)
+
+Test: 8 aces
+Probability: 0.0034106% (76904685 out of 2254848913647)
+
+Test: no aces
+Probability: 2.7874196% (62852101650 out of 2254848913647)
+
+Test: pinochle?
+Probability: 30.5375681% (688576022453 out of 2254848913647)
+
+Test: double pinochle?
+Probability: 0.9353479% (21090682613 out of 2254848913647)
+
+Test: roundhouse?
+Probability: 0.3621811% (8166636545 out of 2254848913647)
+
+Test: has no meld?
+Probability: 11.1899359% (252316148221 out of 2254848913647)
+
